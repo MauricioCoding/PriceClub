@@ -1,0 +1,16 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    environment:
+      VITE_API_URL: http://localhost:5002
+      HOST: 0.0.0.0
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    extra_hosts:
+      # Linux fallback if host.docker.internal doesn't resolve
+      - "host.docker.internal:host-gateway"

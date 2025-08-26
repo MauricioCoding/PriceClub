@@ -1,0 +1,7 @@
+html, body, #root { height: 100%; }
+body { margin: 0; }
+:root {
+  /* iOS notch safe-area (optional) */
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+}
