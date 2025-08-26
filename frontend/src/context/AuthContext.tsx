@@ -15,7 +15,6 @@ export default function AuthProvider({
 }) {
   const [token, setTokenState] = useState<string | null>(null);
 
-  // Load token from localStorage on mount
   useEffect(() => {
     const t = localStorage.getItem("token");
     if (t) setTokenState(t);

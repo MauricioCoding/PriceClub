@@ -59,13 +59,12 @@ export default function Header({ title = "Price Club" }: Props) {
             </div>
           </Link>
 
-          {/* Hamburger */}
           <button
             className="btn btn-link p-0 text-dark"
             type="button"
             aria-label="Menu"
             aria-expanded={open}
-            aria-controls={menuId} // <-- a11y
+            aria-controls={menuId}
             onClick={toggleMenu}
           >
             <svg width="28" height="28" viewBox="0 0 24 24">
@@ -80,7 +79,6 @@ export default function Header({ title = "Price Club" }: Props) {
         </div>
       </div>
 
-      {/* Slide-down menu */}
       <div
         id={menuId}
         className="position-absolute top-100 end-0 me-3 w-50 bg-white z-3 shadow-lg border-start rounded-bottom-4 overflow-hidden"

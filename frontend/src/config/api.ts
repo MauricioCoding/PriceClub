@@ -15,7 +15,7 @@ export const http = {
 
   post: <T, B>(path: string, body: B, init?: RequestInit) =>
     fetch(`${API_BASE}${path}`, {
-      ...init, // spread first so we can overwrite below
+      ...init, 
       method: "POST",
       headers: {
         "Content-Type": "application/json",

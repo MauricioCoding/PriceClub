@@ -25,7 +25,6 @@ export default function Login() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // If already logged in, go home
   useEffect(() => {
     if (token) navigate("/", { replace: true });
   }, [token, navigate]);

@@ -7,7 +7,7 @@ export type CreateOrderRequest = {
 };
 
 export type CreateOrderResponse = {
-  order_id: number;   // align with backend response field
+  order_id: number; 
   total: number;
   order_date: string;
 };

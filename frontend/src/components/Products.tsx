@@ -1,4 +1,3 @@
-// src/components/Products.tsx
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { listProducts } from "../services/Product";
@@ -80,7 +79,6 @@ export default function Products() {
 
   return (
     <section className="container px-3 py-3">
-      {/* Title + checkout */}
       <div className="d-flex flex-column gap-2 mb-3">
         <h1 className="h4 fw-bold m-0">Products</h1>
         <Link to="/cart" className="btn btn-dark btn-lg">
@@ -88,7 +86,6 @@ export default function Products() {
         </Link>
       </div>
 
-      {/* Filters */}
       <div className="vstack gap-2 mb-3">
         <input
           className="form-control"
@@ -121,7 +118,6 @@ export default function Products() {
         </div>
       </div>
 
-      {/* Loading / error */}
       {loading && (
         <div className="d-flex align-items-center gap-2 text-muted">
           <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" />
@@ -134,7 +130,6 @@ export default function Products() {
         </div>
       )}
 
-      {/* Mobile cards */}
       {!loading && !err && (
         <div className="vstack gap-3">
           {filtered.map((p) => {

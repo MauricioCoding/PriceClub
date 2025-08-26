@@ -1,4 +1,3 @@
-// src/components/Home.tsx
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
@@ -9,7 +8,6 @@ export default function Home() {
 
   return (
     <section className="container px-3 py-3">
-      {/* Hero */}
       <div className="bg-light rounded-4 shadow-sm p-4 p-sm-5 text-center text-sm-start">
         <h1 className="h3 fw-bold mb-2">Welcome to Price Club</h1>
         <p className="text-muted mb-4">
@@ -33,7 +31,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Highlights */}
       <div className="mt-4 row g-3">
         <div className="col-12 col-sm-6 col-lg-4">
           <div className="card rounded-4 h-100 shadow-sm">
@@ -78,7 +75,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* CTA */}
       <div className="mt-4 text-center">
         <Link to="/products" className="btn btn-dark btn-lg">
           Start shopping
