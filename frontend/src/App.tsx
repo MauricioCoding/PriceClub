@@ -9,6 +9,7 @@ import { CartProvider } from "./context/CartContext";
 import ProductsPage from "./pages/Products";
 import CartPage from "./pages/Cart";
 import LoginPage from "./pages/Login";
+import SignupPage from "./pages/SignupForm";
 import HomePage from "./pages/Home";
 //import type { JSX } from "react";
 
@@ -33,7 +34,7 @@ export default function App() {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/login" element={<LoginPage />} />
-
+            <Route path="/signup" element={<SignupPage />} />
             {/* 404 fallback */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

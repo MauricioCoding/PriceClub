@@ -16,8 +16,15 @@ export type LoginResponse = {
   user?: User;
 };
 
+export type SignupRequest = { name: string; email: string; password: string };
+export type SignupResponse = User;
+
 export async function login(req: LoginRequest): Promise<LoginResponse> {
   return http.post<LoginResponse, LoginRequest>("/auth/login", req);
+}
+
+export async function signup(req: SignupRequest): Promise<SignupResponse> {
+  return http.post<SignupResponse, SignupRequest>("/auth/signup", req);
 }
 
 export function saveAuth({ token, user }: LoginResponse) {
@@ -32,4 +39,14 @@ export function getToken(): string | null {
 export function authHeader() {
   const t = getToken();
   return t ? { Authorization: `Bearer ${t}` } : {};
+}
+
+export function logout() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+}
+
+export function getUser(): User | null {
+  const raw = localStorage.getItem("user");
+  return raw ? (JSON.parse(raw) as User) : null;
 }
